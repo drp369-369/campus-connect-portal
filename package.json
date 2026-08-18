@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server --ignore client",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "client": "set NODE_OPTIONS=--openssl-legacy-provider && npm.cmd start --prefix client",
+    "dev": "concurrently \"npm.cmd run server\" \"npm.cmd run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm.cmd install --prefix client && npm.cmd run build --prefix client"
   },
   "author": "Aparna Goyal",
   "license": "MIT",

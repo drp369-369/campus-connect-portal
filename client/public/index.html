@@ -46,6 +46,23 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <!-- Tailwind CDN for rapid prototyping -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              rvgreen: '#0b6b4f',
+              'rvgreen-dark': '#044633'
+            },
+            borderRadius: {
+              xl: '1rem'
+            }
+          }
+        }
+      };
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

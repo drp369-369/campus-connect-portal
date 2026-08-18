@@ -1,67 +1,27 @@
-import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { logout } from "../../actions/auth";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Navbar } from "react-bootstrap";
-
-const Navb = ({ auth: { isAuthenticated, loading }, logout }) => {
-  const authLinks = (
-    <ul className="d-flex flex-row mb-3">
-      <li className="nav-item">
-        <Link to="/profiles">Developers</Link>
-      </li>
-
-      <li className="nav-item">
-        <Link to="/posts">Posts</Link>
-      </li>
-      <li className="nav-item">
-        <Link to="/dashboard"> Dashboard </Link>
-      </li>
-      <li className="nav-item">
-        <a onClick={logout} href="/"> Logout </a>
-      </li>
-    </ul>
-  );
-
-  const guestLinks = (
-    <Navbar.Collapse className="justify-content-end">
-      <ul className="d-flex flex-row mb-3"> 
-        <li className="nav-item">
-          <Link to="/profiles">Developers</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/register">Register</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/login">Login</Link>
-        </li>
-      </ul>
-    </Navbar.Collapse>
-  );
-
+export default function Navb() {
   return (
-    <Navbar className="sec" expand="lg">
-      <Navbar.Brand>
-        <h1 className="font-link">
-          <Link to="/">Campus Connect</Link>
-        </h1>
-      </Navbar.Brand>
-      {!loading && (
-        <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
-      )}
-    </Navbar>
+    <header className="sticky top-0 z-40 bg-white shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 rounded-md bg-rvgreen flex items-center justify-center text-white font-semibold">RV</div>
+            <div>
+              <Link to="/" className="text-gray-800 hover:text-rvgreen-dark font-semibold">
+                <div className="text-sm">RV UNIVERSITY<span className="align-super text-xs">®</span></div>
+                <div className="text-xs text-gray-500">School of Computer Science &amp; Engineering</div>
+              </Link>
+            </div>
+          </div>
+
+          <nav className="flex items-center space-x-3">
+            <Link to="/login" className="px-4 py-2 rounded-md text-sm font-medium text-rvgreen hover:bg-gray-50">Login</Link>
+            <Link to="/register" className="px-4 py-2 rounded-full text-sm font-semibold text-white bg-rvgreen">Register</Link>
+          </nav>
+        </div>
+      </div>
+    </header>
   );
-};
-
-Navbar.propTypes = {
-  logout: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired,
-};
-
-const mapStateToProps = (state) => ({
-  auth: state.auth,
-});
-
-export default connect(mapStateToProps, { logout })(Navb);
+}

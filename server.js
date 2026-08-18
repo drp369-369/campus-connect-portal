@@ -1,3 +1,10 @@
+// Polyfill for SlowBuffer which was removed in modern Node.js versions
+const bufferModule = require('buffer');
+if (!bufferModule.SlowBuffer) {
+  bufferModule.SlowBuffer = function() {};
+  bufferModule.SlowBuffer.prototype = {};
+}
+
 const express = require('express');
 const path = require('path');
 const connectDB = require('./config/db');
