@@ -1,252 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campus Connect Portal | Home</title>
-  <link rel="stylesheet" href="/src/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect Portal | Home</title>
+
+    <link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body>
 
-  <!-- Top Navigation Header -->
-  <header class="navbar">
-    <div class="logo-group">
-      <div class="brand-badge">RV</div>
-      <div>
-        <span class="university-name">
-          RV UNIVERSITY<sup>®</sup>
-        </span>
-        <p class="sub-dept">
-          School of Computer Science & Engineering
+    <!-- Top Navigation Header -->
+    <header class="navbar">
+
+        <div class="logo-group">
+
+            <div class="brand-badge">
+                RV
+            </div>
+
+            <div>
+                <span class="university-name">
+                    RV UNIVERSITY<sup>®</sup>
+                </span>
+
+                <p class="sub-dept">
+                    School of Computer Science & Engineering
+                </p>
+            </div>
+
+        </div>
+
+        <div class="nav-actions">
+            <a href="login.html" class="btn-secondary">
+                Login
+            </a>
+
+            <a href="login.html#register" class="btn-primary">
+                Register
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+
+        <div class="hero-content">
+
+            <span class="module-tag">
+                CS3301 - FULL STACK DEVELOPMENT
+            </span>
+
+            <h1>
+                CAMPUS CONNECT PORTAL
+            </h1>
+
+            <p class="subtitle">
+                Connecting Students, Faculty, and Administrators on a Single Digital Platform.
+            </p>
+
+            <div class="hero-cta-group">
+                <a href="#roles" class="btn-hero-primary">
+                    Explore User Portals ➔
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Campus Life & Portal Highlights -->
+    <section class="section-container">
+
+        <h2 class="section-title">
+            Campus Life & Portal Highlights
+        </h2>
+
+        <p class="section-subtitle">
+            Experience academic management simplified through modern technology.
         </p>
-      </div>
-    </div>
 
-    <div class="nav-actions">
-      <button class="btn-secondary" onclick="openAuthModal('login')">Login</button>
-      <button class="btn-primary" onclick="openAuthModal('register')">Register</button>
-    </div>
-  </header>
 
-  <!-- Hero Banner -->
-  <section class="hero-banner">
-    <div class="hero-content">
-      <span class="module-tag">
-        CS3301 - FULL STACK DEVELOPMENT
-      </span>
+        <div class="carousel-wrapper">
 
-      <h1>CAMPUS CONNECT PORTAL</h1>
+            <button
+                class="carousel-btn prev-btn"
+                id="prevBtn"
+                aria-label="Previous slide">
+                &#10094;
+            </button>
 
-      <p class="subtitle">
-        Connecting Students, Faculty, and Administrators on a Single Digital Platform.
-      </p>
 
-      <div class="hero-cta-group">
-        <a href="#roles" class="btn-hero-primary">
-          Explore User Portals ➔
-        </a>
-      </div>
-    </div>
-  </section>
+            <div class="carousel-track-container">
 
-  <!-- Campus Highlights -->
-  <section class="section-container">
-    <h2 class="section-title">
-      Campus Life & Portal Highlights
-    </h2>
+                <div class="carousel-track" id="carouselTrack">
 
-    <p class="section-subtitle">
-      Experience academic management simplified through modern technology.
-    </p>
+                    <!-- Slide 1 -->
+                    <div class="slide active-slide">
 
-    <!-- Carousel -->
-    <div class="carousel-wrapper">
-      <button class="carousel-btn prev-btn" id="prevBtn" type="button" aria-label="Previous slide">
-        &#10094;
-      </button>
+                        <img
+                            src="./src/assets/rvu_campus.png"
+                            alt="RV University Campus Infrastructure">
 
-      <div class="carousel-track-container">
-        <div class="carousel-track" id="carouselTrack">
-          <!-- Slide 1 -->
-          <div class="slide active-slide">
-            <img
-              src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000&auto=format&fit=crop"
-              alt="University Campus"
-            />
-            <div class="slide-caption">
-              Modern University Infrastructure
+                        <div class="slide-caption">
+                            RV University Campus & Infrastructure
+                        </div>
+
+                    </div>
+
+
+                    <!-- Slide 2 -->
+                    <div class="slide">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop"
+                            alt="Student Collaboration">
+
+                        <div class="slide-caption">
+                            Collaborative Learning & Hackathons
+                        </div>
+
+                    </div>
+
+
+                    <!-- Slide 3 -->
+                    <div class="slide">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1000&auto=format&fit=crop"
+                            alt="Digital Dashboard">
+
+                        <div class="slide-caption">
+                            Real-Time Academic Management
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-          </div>
 
-          <!-- Slide 2 -->
-          <div class="slide">
-            <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop"
-              alt="Student Collaboration"
-            />
-            <div class="slide-caption">
-              Collaborative Learning & Hackathons
-            </div>
-          </div>
 
-          <!-- Slide 3 -->
-          <div class="slide">
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1000&auto=format&fit=crop"
-              alt="Digital Dashboard"
-            />
-            <div class="slide-caption">
-              Real-Time Academic Management
-            </div>
-          </div>
+            <button
+                class="carousel-btn next-btn"
+                id="nextBtn"
+                aria-label="Next slide">
+                &#10095;
+            </button>
+
         </div>
-      </div>
 
-      <button class="carousel-btn next-btn" id="nextBtn" type="button" aria-label="Next slide">
-        &#10095;
-      </button>
-    </div>
-  </section>
 
-  <!-- Roles & Portals Section -->
-  <section id="roles" class="section-container">
-    <h2 class="section-title">Tailored Portals for Everyone</h2>
-    <p class="section-subtitle">Dedicated workspaces designed for productivity and smooth communication.</p>
+        <!-- Slide Indicators -->
+        <div class="carousel-dots" id="carouselDots">
 
-    <div class="portals-grid">
-      <div class="portal-card">
-        <div class="portal-icon">🎓</div>
-        <h3>Student Portal</h3>
-        <p>Access course materials, assignment submissions, attendance records, event schedules, and peer study groups.</p>
-        <a href="#login" onclick="openAuthModal('login')" class="portal-link">Enter Student Desk →</a>
-      </div>
+            <span
+                class="dot active-dot"
+                data-index="0">
+            </span>
 
-      <div class="portal-card">
-        <div class="portal-icon">📚</div>
-        <h3>Faculty Portal</h3>
-        <p>Manage curriculum planning, publish lecture notes, review student submissions, and communicate announcements.</p>
-        <a href="#login" onclick="openAuthModal('login')" class="portal-link">Enter Faculty Desk →</a>
-      </div>
+            <span
+                class="dot"
+                data-index="1">
+            </span>
 
-      <div class="portal-card">
-        <div class="portal-icon">🏛️</div>
-        <h3>Admin Portal</h3>
-        <p>Oversee departmental administration, user authentication, system telemetry, and centralized campus announcements.</p>
-        <a href="#login" onclick="openAuthModal('login')" class="portal-link">Enter Admin Desk →</a>
-      </div>
-    </div>
-  </section>
+            <span
+                class="dot"
+                data-index="2">
+            </span>
 
-  <!-- Modal for Login / Register -->
-  <div id="authModal" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.65); backdrop-filter:blur(8px); z-index:9999; place-content:center; padding:1.5rem;" onclick="closeModalOnBackdrop(event)">
-    <div style="background:#fff; border-radius:20px; max-width:440px; width:100%; padding:2.5rem; box-shadow:0 25px 50px -12px rgba(0,0,0,0.25); position:relative; animation:modalPop 0.3s ease;">
-      <button onclick="closeAuthModal()" style="position:absolute; top:1.25rem; right:1.25rem; background:none; border:none; font-size:1.5rem; cursor:pointer; color:#64748b;">✕</button>
-      <h3 id="modalTitle" style="font-family:'Outfit',sans-serif; font-size:1.8rem; font-weight:700; color:#0f172a; margin-bottom:0.5rem;">Welcome Back</h3>
-      <p id="modalSubtitle" style="color:#64748b; font-size:0.95rem; margin-bottom:1.75rem;">Enter your university credentials to continue.</p>
-
-      <form onsubmit="handleAuthSubmit(event)">
-        <div style="margin-bottom:1.25rem;">
-          <label style="display:block; font-size:0.85rem; font-weight:600; color:#334155; margin-bottom:0.4rem;">University Email</label>
-          <input type="email" required placeholder="user@rvu.edu.in" style="width:100%; padding:0.75rem 1rem; border-radius:10px; border:1px solid #cbd5e1; font-size:0.95rem; outline:none; box-sizing:border-box; transition:border 0.2s;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'" />
         </div>
-        <div style="margin-bottom:1.5rem;">
-          <label style="display:block; font-size:0.85rem; font-weight:600; color:#334155; margin-bottom:0.4rem;">Password</label>
-          <input type="password" required placeholder="••••••••" style="width:100%; padding:0.75rem 1rem; border-radius:10px; border:1px solid #cbd5e1; font-size:0.95rem; outline:none; box-sizing:border-box; transition:border 0.2s;" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'" />
+
+    </section>
+
+
+    <!-- User Role Section -->
+    <section id="roles" class="section-container bg-light">
+
+        <h2 class="section-title">
+            Choose Your Portal View
+        </h2>
+
+
+        <div class="roles-grid">
+
+
+            <!-- Student Card -->
+            <article class="role-card student-border">
+
+                <div class="role-icon">
+                    👨‍🎓
+                </div>
+
+                <h3>
+                    Student Portal
+                </h3>
+
+                <ul class="feature-bullets">
+
+                    <li>• View Notices & Events</li>
+                    <li>• Submit Assignments</li>
+                    <li>• Track Attendance</li>
+                    <li>• Update Profile</li>
+
+                </ul>
+
+                <button class="btn-portal student-bg" onclick="window.location.href='#student'">
+                    Access Student View
+                </button>
+
+            </article>
+
+
+            <!-- Faculty Card -->
+            <article class="role-card faculty-border">
+
+                <div class="role-icon">
+                    👨‍🏫
+                </div>
+
+                <h3>
+                    Faculty Portal
+                </h3>
+
+                <ul class="feature-bullets">
+
+                    <li>• Post Notices & Events</li>
+                    <li>• Create Assignments</li>
+                    <li>• Mark Attendance</li>
+                    <li>• View Submissions</li>
+
+                </ul>
+
+                <button class="btn-portal faculty-bg" onclick="window.location.href='login.html'">
+                    Access Faculty View
+                </button>
+
+            </article>
+
+
+            <!-- Admin Card -->
+            <article class="role-card admin-border">
+
+                <div class="role-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Admin Portal
+                </h3>
+
+                <ul class="feature-bullets">
+
+                    <li>• Manage Users</li>
+                    <li>• Manage Notices & Events</li>
+                    <li>• View System Reports</li>
+                    <li>• System Settings</li>
+
+                </ul>
+
+                <button class="btn-portal admin-bg" onclick="window.location.href='login.html'">
+                    Access Admin View
+                </button>
+
+            </article>
+
         </div>
-        <button type="submit" id="modalSubmitBtn" class="btn-primary" style="width:100%; border:none; padding:0.85rem; font-size:1rem; border-radius:10px; cursor:pointer;">
-          Sign In
-        </button>
-      </form>
-    </div>
-  </div>
 
-  <!-- Footer -->
-  <footer class="portal-footer">
-    <p><strong>Campus Connect Portal</strong> &copy; 2026. All rights reserved.</p>
-    <p>RV UNIVERSITY &bull; School of Computer Science &amp; Engineering</p>
-  </footer>
+    </section>
 
-  <!-- Interactive Scripts -->
-  <script>
-    // Carousel Implementation
-    const track = document.getElementById('carouselTrack');
-    const slides = Array.from(track.children);
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    let currentIndex = 0;
-    let autoPlayInterval = null;
+    <!-- React App Root Container (AuthModule & StudentPortal) -->
+    <section id="auth" style="padding: 20px 0;">
+        <div id="auth-root"></div>
+    </section>
 
-    function updateCarousel(index) {
-      if (index < 0) {
-        currentIndex = slides.length - 1;
-      } else if (index >= slides.length) {
-        currentIndex = 0;
-      } else {
-        currentIndex = index;
-      }
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 RV University - School of Computer Science & Engineering. All Rights Reserved.</p>
+        <p>Campus Connect Portal | Full Stack Development Lab</p>
+    </footer>
 
-    if (prevBtn && nextBtn) {
-      prevBtn.addEventListener('click', () => {
-        resetAutoPlay();
-        updateCarousel(currentIndex - 1);
-      });
+    <script type="module" src="./src/main.jsx"></script>
+    <script>
+        // Carousel Functionality
+        const track = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.slide').length;
 
-      nextBtn.addEventListener('click', () => {
-        resetAutoPlay();
-        updateCarousel(currentIndex + 1);
-      });
-    }
+        function updateCarousel(index) {
+            currentSlide = (index + totalSlides) % totalSlides;
+            if (track) {
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('active-dot', idx === currentSlide);
+            });
+        }
 
-    function startAutoPlay() {
-      autoPlayInterval = setInterval(() => {
-        updateCarousel(currentIndex + 1);
-      }, 4500);
-    }
-
-    function resetAutoPlay() {
-      if (autoPlayInterval) clearInterval(autoPlayInterval);
-      startAutoPlay();
-    }
-
-    startAutoPlay();
-
-    // Modal Handlers
-    const modal = document.getElementById('authModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalSubtitle = document.getElementById('modalSubtitle');
-    const modalSubmitBtn = document.getElementById('modalSubmitBtn');
-
-    window.openAuthModal = function(type) {
-      if (type === 'register') {
-        modalTitle.innerText = 'Create Account';
-        modalSubtitle.innerText = 'Register with your student/faculty ID.';
-        modalSubmitBtn.innerText = 'Complete Registration';
-      } else {
-        modalTitle.innerText = 'Welcome Back';
-        modalSubtitle.innerText = 'Enter your university credentials to continue.';
-        modalSubmitBtn.innerText = 'Sign In';
-      }
-      modal.style.display = 'grid';
-    };
-
-    window.closeAuthModal = function() {
-      modal.style.display = 'none';
-    };
-
-    window.closeModalOnBackdrop = function(e) {
-      if (e.target === modal) {
-        closeAuthModal();
-      }
-    };
-
-    window.handleAuthSubmit = function(e) {
-      e.preventDefault();
-      alert('Authentication simulated successfully for Campus Connect Portal.');
-      closeAuthModal();
-    };
-  </script>
+        if (prevBtn) prevBtn.addEventListener('click', () => updateCarousel(currentSlide - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => updateCarousel(currentSlide + 1));
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => updateCarousel(idx));
+        });
+    </script>
 </body>
 </html>
